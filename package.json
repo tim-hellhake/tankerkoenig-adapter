@@ -1,0 +1,66 @@
+{
+  "name": "tankerkoenig-adapter",
+  "display_name": "Tankerkönig",
+  "version": "0.1.0",
+  "description": "Shows you the gas prices near you (germany only)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-hellhake/tankerkoenig-adapter.git"
+  },
+  "author": "Tim Hellhake",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tim-hellhake/tankerkoenig-adapter/issues"
+  },
+  "homepage": "https://github.com/tim-hellhake/tankerkoenig-adapter#readme",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "lib/index.js",
+    "lib/tankerkoenig-adapter.js"
+  ],
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "schema": {
+      "type": "object",
+      "required": [
+        "apiKey",
+        "latitude",
+        "longitude"
+      ],
+      "properties": {
+        "apiKey": {
+          "type": "string",
+          "title": "The api key"
+        },
+        "latitude": {
+          "type": "string",
+          "title": "The latitude of your position"
+        },
+        "longitude": {
+          "type": "string",
+          "title": "The longitude of your position"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.3.7",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2",
+    "@types/node": "^12.0.12"
+  }
+}
