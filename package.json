@@ -54,7 +54,7 @@
           "title": "The longitude of your position"
         },
         "radius": {
-          "type": "string",
+          "type": "number",
           "title": "The search radius in km"
         }
       }
