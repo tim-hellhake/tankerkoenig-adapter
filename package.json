@@ -37,7 +37,8 @@
       "required": [
         "apiKey",
         "latitude",
-        "longitude"
+        "longitude",
+        "radius"
       ],
       "properties": {
         "apiKey": {
@@ -51,6 +52,10 @@
         "longitude": {
           "type": "string",
           "title": "The longitude of your position"
+        },
+        "radius": {
+          "type": "string",
+          "title": "The search radius in km"
         }
       }
     }

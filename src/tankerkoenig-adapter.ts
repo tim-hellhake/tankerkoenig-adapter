@@ -101,9 +101,10 @@ export class TankerkoenigAdapter extends Adapter {
             apiKey,
             latitude,
             longitude,
+            radius
         } = manifest.moziot.config;
 
-        const url = `https://creativecommons.tankerkoenig.de/json/list.php?lat=${latitude}&lng=${longitude}&rad=4&type=all&apikey=${apiKey}`;
+        const url = `https://creativecommons.tankerkoenig.de/json/list.php?lat=${latitude}&lng=${longitude}&rad=${radius}&type=all&apikey=${apiKey}`;
 
         (async () => {
             const result = await fetch(url);
