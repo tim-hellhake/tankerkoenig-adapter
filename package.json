@@ -32,6 +32,9 @@
     },
     "plugin": true,
     "exec": "{nodeLoader} {path}",
+    "config": {
+      "radius": 5
+    },
     "schema": {
       "type": "object",
       "required": [
