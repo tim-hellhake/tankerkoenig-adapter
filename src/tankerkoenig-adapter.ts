@@ -101,7 +101,8 @@ export class TankerkoenigAdapter extends Adapter {
             apiKey,
             latitude,
             longitude,
-            radius
+            radius,
+            pollInterval
         } = manifest.moziot.config;
 
         const url = `https://creativecommons.tankerkoenig.de/json/list.php?lat=${latitude}&lng=${longitude}&rad=${radius}&type=all&apikey=${apiKey}`;
@@ -114,7 +115,7 @@ export class TankerkoenigAdapter extends Adapter {
                 console.log(`Found gas station ${station.name}`);
                 const gasStation = new GasStation(this, manifest, station);
                 this.handleDeviceAdded(gasStation);
-                gasStation.startPolling(5 * 60);
+                gasStation.startPolling(pollInterval * 60);
             }
         })();
     }
