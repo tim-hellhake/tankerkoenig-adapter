@@ -13,7 +13,8 @@ interface ListResult {
 
 interface Station {
     id: string,
-    name: string
+    name: string,
+    street: string
 }
 
 interface DetailResult {
@@ -34,7 +35,7 @@ class GasStation extends Device {
     constructor(adapter: any, private manifest: any, private station: Station) {
         super(adapter, station.id);
         this['@context'] = 'https://iot.mozilla.org/schemas/';
-        this.name = station.name;
+        this.name = `${station.name} (${station.street})`;
         this.description = station.name;
 
         this.e5 = this.createProperty('e5', {
