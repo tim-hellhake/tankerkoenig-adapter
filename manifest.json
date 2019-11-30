@@ -1,0 +1,57 @@
+{
+  "manifest_version": 1,
+  "id": "tankerkoenig-adapter",
+  "name": "Tankerkönig",
+  "short_name": "Tankerkönig",
+  "version": "0.2.1",
+  "description": "Shows you the gas prices near you (germany only)",
+  "homepage_url": "https://github.com/tim-hellhake/tankerkoenig-adapter#readme",
+  "license": "MPL-2.0",
+  "author": "Tim Hellhake",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "strict_min_version": "0.10.0",
+      "strict_max_version": "*",
+      "primary_type": "adapter"
+    }
+  },
+  "options": {
+    "default": {
+      "radius": 5,
+      "pollInterval": 60
+    },
+    "schema": {
+      "type": "object",
+      "required": [
+        "apiKey",
+        "latitude",
+        "longitude",
+        "radius",
+        "pollInterval"
+      ],
+      "properties": {
+        "apiKey": {
+          "type": "string",
+          "title": "The api key"
+        },
+        "latitude": {
+          "type": "string",
+          "title": "The latitude of your position"
+        },
+        "longitude": {
+          "type": "string",
+          "title": "The longitude of your position"
+        },
+        "radius": {
+          "type": "number",
+          "title": "The search radius in km"
+        },
+        "pollInterval": {
+          "type": "integer",
+          "title": "The number of minutes between two updates"
+        }
+      }
+    }
+  }
+}
