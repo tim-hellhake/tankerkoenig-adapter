@@ -3,7 +3,7 @@
   "id": "tankerkoenig-adapter",
   "name": "Tankerkönig",
   "short_name": "Tankerkönig",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Shows you the gas prices near you (germany only)",
   "homepage_url": "https://github.com/tim-hellhake/tankerkoenig-adapter#readme",
   "license": "MPL-2.0",
