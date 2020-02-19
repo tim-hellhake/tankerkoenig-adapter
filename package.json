@@ -1,7 +1,7 @@
 {
   "name": "tankerkoenig-adapter",
   "display_name": "Tankerkönig",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Shows you the gas prices near you (germany only)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
